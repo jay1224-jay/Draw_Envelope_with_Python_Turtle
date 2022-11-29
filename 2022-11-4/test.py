@@ -3,6 +3,8 @@ import time
 import turtle as screen
 
 
+""" ======== setting ========  """
+
 #get screen canvas
 cv = screen.getcanvas()
 #cv.bind('<Motion>', on_motion)
@@ -10,7 +12,7 @@ cv = screen.getcanvas()
 #set screen size
 screen.setup(1000, 600)
 
-time.sleep(10)
+#time.sleep(10)
 turtle = screen.Turtle()
 
 #get screen information
@@ -19,6 +21,8 @@ win_height = screen.window_height()
 
 #set turtle pensize()
 turtle.pensize(5)
+
+""" ======== setting ========  """
 
 #draw x-axis
 turtle.penup()
