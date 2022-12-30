@@ -5,10 +5,6 @@ import turtle as screen
 
 """ ======== setting ========  """
 
-#get screen canvas
-cv = screen.getcanvas()
-#cv.bind('<Motion>', on_motion)
-
 #set screen size
 screen.setup(1000, 600)
 
