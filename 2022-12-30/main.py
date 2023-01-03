@@ -16,19 +16,19 @@ and can change pattern function
 cv = screen.getcanvas()
 #cv.bind('<Motion>', on_motion)
 
-screen_height = 600
-screen_width = 1200
+screen_height = 700
+screen_width = 800
 #set screen size
 screen.setup(screen_width, screen_height)
 
-#time.sleep(5)
+# time.sleep(5)
 
 turtle = screen.Turtle()
 
 # ========= all of arguments =========
 
-radius = 350
-n = 500
+radius = 300
+n = 1000
 turtle.speed(10)
 
 turtle.penup()
@@ -78,10 +78,16 @@ turtle.pendown()
 turtle.circle(radius)
 turtle.penup()
 
+def power(number, exp):
+
+    n = 1
+    for _ in range(exp):
+        n *= number
+    return n
 
 def pattern_function(n):
 
-    return n * n * n
+    return power(n, 11)
 
 def draw_between_2_points(p1, p2):
 
