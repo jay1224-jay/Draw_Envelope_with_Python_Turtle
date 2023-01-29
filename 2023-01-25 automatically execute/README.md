@@ -15,9 +15,14 @@ Tell Python what pattern to draw
 ```main.py``` will tell ```draw.py``` what pattern to draw.
 
 ## 3. Processing image from Turtle (in ```main.py```, ```image_process.py```)
-After ```draw.py``` completes, ```main.py
+After ```draw.py``` completes, ```main.py``` will tell ```image_process.py``` to take screenshot in Turtle screen and convert the .eps file to .png file
 
-After ```draw.py``` completes, ```main.py``` will tell ```draw.py``` what to draw next.
+## 4. Re-executing (in ```main.py```)
+After ```image_process.py``` completes, ```main.py``` will tell ```draw.py``` what to draw next. (go to 2. step)
+End until all works has been completed.
+
+
+
 
 
 # Testing part
