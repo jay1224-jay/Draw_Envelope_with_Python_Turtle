@@ -31,7 +31,7 @@ date: 2023/1/29
 
 created 3 file: main.py, draw.py, and image_process.py
 
-## maih.py:
+## main.py:
 
 test creating a range of patterns ( n^1, n^2, n^3, ..., n^10 ) in __list__ using __Generator__.
 
