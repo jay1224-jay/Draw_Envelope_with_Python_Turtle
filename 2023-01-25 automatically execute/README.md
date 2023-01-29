@@ -2,7 +2,7 @@
 
 files: 
 
-```main.py```:            control all programs
+```main.py```:           control all programs
 
 ```draw.py```:            draw Envelope by given pattern, such as n -> n^2 , n -> 2n
 
@@ -23,8 +23,20 @@ After ```image_process.py``` completes, ```main.py``` will tell ```draw.py``` wh
 End until all works has been completed.
 
 
+```
 
 
+# Dev log
 
-# Testing part
+date: 2023/1/29
+
+created 3 file: main.py, draw.py, and image_process.py
+
+## maih.py:
+
+test creating a range of patterns ( n^1, n^2, n^3, ..., n^10 ) in __list__
+
+## draw.py
+
+convert the original drawing code to __class__
 
