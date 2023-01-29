@@ -19,6 +19,7 @@ After ```draw.py``` completes, ```main.py``` will tell ```image_process.py``` to
 
 ## 4. Re-executing (in ```main.py```)
 After ```image_process.py``` completes, ```main.py``` will tell ```draw.py``` what to draw next. (go to 2. step)
+
 End until all works has been completed.
 
 
