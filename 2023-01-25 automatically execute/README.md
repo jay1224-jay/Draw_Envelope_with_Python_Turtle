@@ -23,7 +23,6 @@ After ```image_process.py``` completes, ```main.py``` will tell ```draw.py``` wh
 End until all works has been completed.
 
 
-```
 
 
 # Dev log
@@ -34,7 +33,7 @@ created 3 file: main.py, draw.py, and image_process.py
 
 ## maih.py:
 
-test creating a range of patterns ( n^1, n^2, n^3, ..., n^10 ) in __list__
+test creating a range of patterns ( n^1, n^2, n^3, ..., n^10 ) in __list__ using __Generator__.
 
 ## draw.py
 
