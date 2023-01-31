@@ -43,6 +43,7 @@ convert the original drawing code to __class__
 
 None.
 
+------------------------------------
 
 
 ## date: 2023/1/30
@@ -63,7 +64,7 @@ print("start processing image")
 image_process.image_process(screen=screen.getscreen(), pattern=self.pattern)        
 print("all done")
 ```
-
+Allow __main.py__ to change __*n*__ and __*radius*__ .
 
 #### image_process.py
 
@@ -112,5 +113,34 @@ def image_process(screen, pattern):
     print("converted successfully")
 ```
 
+----------------------------------------------
+
+## date:2023/1/31
+
+Generated plenty of pictures of envelope with different patterns.
 
 
+#### main.py
+
+None.
+
+#### draw.py
+
+None.
+
+#### image_process.py
+
+Changed the format of the file name.
+Replace __\*__ (asterisk) with __x__ to avoid not being found by OS.
+
+__old:__
+```
+eps_file_name   = pattern + ".eps"
+image_file_name = pattern + ".png"
+```
+
+__new:__
+```
+eps_file_name   = f"{pattern}_{n}_{radius}.eps".replace("*", "x") 
+image_file_name = f"{pattern}_{n}_{radius}.png".replace("*", "x") 
+```

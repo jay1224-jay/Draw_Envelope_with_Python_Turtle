@@ -20,8 +20,8 @@ def image_process(screen, pattern, n, radius):
     pattern = "n**2"
     """
 
-    eps_file_name   = f"{pattern}_{n}_{radius}.eps"
-    image_file_name = f"{pattern}_{n}_{radius}.png"
+    eps_file_name   = f"{pattern}_{n}_{radius}.eps".replace("*", "x") 
+    image_file_name = f"{pattern}_{n}_{radius}.png".replace("*", "x") 
 
     print("start converting to .eps")
     screen.getcanvas().postscript(file = eps_file_name)
