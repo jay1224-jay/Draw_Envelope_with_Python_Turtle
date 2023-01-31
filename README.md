@@ -2,6 +2,7 @@
 
 **NOTE: This project is for Taiwan Academic Portfolio / E-Portfolio. Please do not crib it.**
 
+## Currently Working on [__*2023-01-25 automatically execute*__](https://github.com/jay1224-jay/research-of-envelope-with-python/tree/main/2023-01-25%20automatically%20execute) !!!
 
 ## What is **"Envelope"** in Math?
 
