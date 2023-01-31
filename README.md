@@ -12,8 +12,8 @@ For example, if the pattern is __*n -> 2n+1*__, then you will get the heart shap
 
 ## What does this project do?
 
-Illustrate shapes from kinds of patterns such as *n -> n^2*, *n -> 6n*, etc.
+Draw shapes from kinds of patterns such as *n -> n^2*, *n -> 6n*, etc.
 
 ## Why do I want to do this?
 
-For fun! :)
+To discover different patterns of envelope.
