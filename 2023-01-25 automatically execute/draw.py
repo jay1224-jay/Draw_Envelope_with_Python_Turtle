@@ -1,61 +1,58 @@
 import turtle as screen
 import math
+import image_process
 
 
+class draw_class:
+    def __init__(self, pattern=None, n=100, radius=300):
 
-def power(number, exp):
-
-    n = 1
-    for _ in range(exp):
-        n *= number
-    return n
-
-
-
-class draw:
-
-    
-    def __init__(self, pattern=None):
+        screen.clearscreen()
 
         #get screen canvas
         self.cv = screen.getcanvas()
 
-        self.screen_height = 700
-        self.screen_width = 800
+        self.screen_height = 900
+        self.screen_width = 1300
         #set screen size
         screen.setup(self.screen_width, self.screen_height)  
 
         self.turtle = screen.Turtle()
 
-        self.radius = 300
-        self.n = 100
+        self.radius = radius
+        self.n = n
 
-        self.pattern = 'n^2'
+        self.pattern = 'math.pow(n, 2)'
+
+        if pattern:
+            self.pattern = pattern
+
+        print("pattern:", self.pattern)
+
 
 
         self.turtle.speed(10)
         
         self.turtle.penup()
-        self.turtle.goto( -1*(self.screen_width/2) + 10, (self.screen_height/2) - 50 )
+        self.turtle.goto( -1*(self.screen_width/2) + 10, (self.screen_height/2) - 70 )
         self.turtle.write(
-                f"radius = {self.radius}, n = {self.n}\nwin_height = {self.screen_height}, win_width = {self.screen_width}", move=False,
+                f"radius = {self.radius}, n = {self.n}\nwin_height = {self.screen_height}, win_width = {self.screen_width}\npattern = {self.pattern}", move=False,
                     align='left', font=('Arial', 15, 'normal'))
 
         #set turtle speed
         screen.delay(0)
-
-        if pattern:
-            self.pattern = pattern
-
-        self.pattern = "self." + self.pattern  # because of the missing "self."
 
         self.draw_axis()
         self.draw_circle()
         self.draw_equal_division_points()
         self.draw_lines()
 
-        screen.done()
-        print("done")
+        print("start processing image")
+
+        image_process.image_process(screen=screen.getscreen(), pattern=self.pattern, n = self.n, radius = self.radius)
+        
+        print("all done")
+        
+        
 
     def draw_axis(self):
 
@@ -127,7 +124,7 @@ class draw:
 
     def pattern_function(self, n):
     
-        return eval(self.pattern)
+        return int(eval(self.pattern))
     
     def draw_between_2_points(self, p1, p2):
     
@@ -138,4 +135,5 @@ class draw:
         self.turtle.penup()
 
 
-draw()
+if __name__ == '__main__':
+    draw_class()
