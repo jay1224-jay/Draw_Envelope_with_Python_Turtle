@@ -55,7 +55,7 @@ Change __*patterns*__ format: __*n \*\* 2*__ -> __*math.pow(n, 2)*__  because *\
 #### draw.py
 
 add 
-```
+```python
 class draw_class:
     def __init__(self, pattern=None, n=100, radius=300):
 ```
