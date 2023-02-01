@@ -55,11 +55,11 @@ Change __*patterns*__ format: __*n \*\* 2*__ -> __*math.pow(n, 2)*__  because *\
 #### draw.py
 
 add 
-```
+```python
 class draw_class:
     def __init__(self, pattern=None, n=100, radius=300):
 ```
-```
+```python
 print("start processing image")
 image_process.image_process(screen=screen.getscreen(), pattern=self.pattern)        
 print("all done")
@@ -81,7 +81,7 @@ __*pattern*__:
 Tell __image_process__ the pattern you use. (which is actually the .png file name)
 
 code:
-```
+```python
 from PIL import Image
 
 def image_process(screen, pattern):
@@ -134,13 +134,13 @@ Changed the format of the file name.
 Replace __\*__ (asterisk) with __x__ to avoid not being found by OS.
 
 __old:__
-```
+```python
 eps_file_name   = pattern + ".eps"
 image_file_name = pattern + ".png"
 ```
 
 __new:__
-```
+```python
 eps_file_name   = f"{pattern}_{n}_{radius}.eps".replace("*", "x") 
 image_file_name = f"{pattern}_{n}_{radius}.png".replace("*", "x") 
 ```
