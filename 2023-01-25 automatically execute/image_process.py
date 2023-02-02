@@ -1,11 +1,9 @@
  
 import turtle
 
-from PIL import Image
+from PIL import Image 
 
-Image.MAX_IMAGE_PIXELS = 933120000
-
-
+Image.MAX_IMAGE_PIXELS = None
 
 def image_process(screen, pattern, n, radius):
 
@@ -32,7 +30,7 @@ def image_process(screen, pattern, n, radius):
     eps_image.load(scale=10)
 
     print("start converting from .eps to .png")
-    eps_image.save("./envelope/pow/" + image_file_name)
+    eps_image.save("./" + image_file_name)
     print("converted successfully")
 
 
