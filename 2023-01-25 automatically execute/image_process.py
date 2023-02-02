@@ -3,7 +3,7 @@ import turtle
 
 from PIL import Image 
 
-Image.MAX_IMAGE_PIXELS = None
+# Image.MAX_IMAGE_PIXELS = None
 
 def image_process(screen, pattern, n, radius):
 
