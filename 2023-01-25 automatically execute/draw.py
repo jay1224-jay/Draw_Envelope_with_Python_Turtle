@@ -11,7 +11,7 @@ class draw_class:
         #get screen canvas
         self.cv = screen.getcanvas()
 
-        self.screen_height = 900
+        self.screen_height = 1300
         self.screen_width = 1300
         #set screen size
         screen.setup(self.screen_width, self.screen_height)  

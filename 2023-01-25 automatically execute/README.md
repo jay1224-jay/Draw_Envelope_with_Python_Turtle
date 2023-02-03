@@ -144,3 +144,34 @@ __new:__
 eps_file_name   = f"{pattern}_{n}_{radius}.eps".replace("*", "x") 
 image_file_name = f"{pattern}_{n}_{radius}.png".replace("*", "x") 
 ```
+
+----------------------------------------------
+
+## date:2023/2/3
+
+Fix wrong envelope and too large pictures of envelope by reducing scale from 10 to 5.
+If there's any pattern involving exponent, use *n \*\* 2* rather than *math.pow(n, 2)* because it will generate wrong envelope.
+
+#### main.py
+
+None.
+
+#### draw.py
+
+add *scale* argument in *draw_class*
+
+```python
+class draw_class:
+    def __init__(self, pattern=None, n=500, radius=300, scale=5):
+```
+
+#### image_process.py
+
+add *scale* in file name format
+
+```python
+
+eps_file_name   = f"{pattern}_{n}_{radius}_{scale}.eps".replace("*", "x") 
+image_file_name = f"{pattern}_{n}_{radius}_{scale}.png".replace("*", "x") 
+```
+

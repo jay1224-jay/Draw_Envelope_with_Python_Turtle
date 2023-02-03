@@ -19,7 +19,7 @@ def image_process(screen, pattern, n, radius, scale=5):
     """
 
     eps_file_name   = f"{pattern}_{n}_{radius}_{scale}.eps".replace("*", "x") 
-    image_file_name = f"{pattern}_{n}_{radius}.{scale}.png".replace("*", "x") 
+    image_file_name = f"{pattern}_{n}_{radius}_{scale}.png".replace("*", "x") 
 
     print("start converting to .eps")
     screen.getcanvas().postscript(file = eps_file_name)
@@ -30,7 +30,7 @@ def image_process(screen, pattern, n, radius, scale=5):
     eps_image.load(scale=scale)
 
     print("start converting from .eps to .png")
-    eps_image.save("./" + image_file_name)
+    eps_image.save("./envelope/pow/" + image_file_name)
     print("converted successfully")
 
 
