@@ -4,7 +4,7 @@ import image_process
 
 
 class draw_class:
-    def __init__(self, pattern=None, n=100, radius=300):
+    def __init__(self, pattern=None, n=500, radius=300, scale=5):
 
         screen.clearscreen()
 
@@ -21,7 +21,9 @@ class draw_class:
         self.radius = radius
         self.n = n
 
-        self.pattern = 'math.pow(n, 2)'
+        # do not use math.pow(n, 2) because it will become scientific notation.
+        # After operations, it will become inacurrate, which will lead to wrong envelope.
+        self.pattern = 'n ** 2'   
 
         if pattern:
             self.pattern = pattern
@@ -48,7 +50,7 @@ class draw_class:
 
         print("start processing image")
 
-        image_process.image_process(screen=screen.getscreen(), pattern=self.pattern, n = self.n, radius = self.radius)
+        image_process.image_process(screen=screen.getscreen(), pattern=self.pattern, n = self.n, radius = self.radius, scale=scale)
         
         print("all done")
         
@@ -116,15 +118,16 @@ class draw_class:
         
         for number in range(1, self.n+1):  # n is the number of points
             p1 = self.all_points[number - 1]
-            p2 = self.all_points[
-                    (self.pattern_function(number) - 1) % self.n
-                    ]
+            index = (self.pattern_function(number) - 1) % self.n
+            p2 = self.all_points[index]
+            # print(number, index)
         
             self.draw_between_2_points(p1, p2)
 
     def pattern_function(self, n):
     
         return int(eval(self.pattern))
+        # return n ** 11
     
     def draw_between_2_points(self, p1, p2):
     

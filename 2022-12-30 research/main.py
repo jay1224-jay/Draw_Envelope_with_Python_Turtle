@@ -28,7 +28,7 @@ turtle = screen.Turtle()
 # ========= all of arguments =========
 
 radius = 300
-n = 100
+n = 500
 turtle.speed(10)
 
 turtle.penup()
@@ -87,7 +87,7 @@ def power(number, exp):
 
 def pattern_function(n):
 
-    return n * 2
+    return n ** 11
 
 def draw_between_2_points(p1, p2):
 
@@ -134,9 +134,11 @@ turtle.pensize(0.5)
 
 for number in range(1, n+1):  # n is the number of points
     p1 = all_points[number - 1]
+    index = (pattern_function(number) - 1) % n
     p2 = all_points[
-            (pattern_function(number) - 1) % n
+            index
             ]
+    print(number, index)
 
     draw_between_2_points(p1, p2)
 
