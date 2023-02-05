@@ -30,7 +30,7 @@ def image_process(screen, pattern, n, radius, scale=5):
     eps_image.load(scale=scale)
 
     print("start converting from .eps to .png")
-    eps_image.save("./envelope/pow/" + image_file_name)
+    eps_image.save("./envelope/tn+1_1000/" + image_file_name)
     print("converted successfully")
 
 
